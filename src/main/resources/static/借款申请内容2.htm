@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://www.9tich.com/titaniumFinancialH5/index.html?from=singlemessage&isappinstalled=0#/firstApply -->
+<html class="ng2-style-sheet"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<meta name="format-detection" content="telephone=no">
+  <title>借款申请</title>
+  <link rel="icon" type="image/x-icon" href="https://www.9tich.com/titaniumFinancialH5/favicon.ico">
+  
+  <link rel="stylesheet" href="../css/maid.css">
+  <link rel="stylesheet" href="../css/styles.css">
+<style>@charset "UTF-8";
+
+
+
+.input[_ngcontent-c0] {
+  width: 330px;
+  position: absolute;
+  left: 50%;
+  margin-left: -165px;
+  top: 48%;
+  background: #fff;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 10px; }
+  .input.noBgColor[_ngcontent-c0] {
+    background: #fffdf2; }
+    .input.noBgColor[_ngcontent-c0]   input[_ngcontent-c0] {
+      background: none !important; }
+  .input[_ngcontent-c0]   label[_ngcontent-c0] {
+    padding: 15px 5px;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    letter-spacing: 0;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .input[_ngcontent-c0]   label[_ngcontent-c0]   input[_ngcontent-c0] {
+      color: #333;
+      width: 50%;
+      background: none;
+      outline: none;
+      border: 0px; }
+    .input[_ngcontent-c0]   label[_ngcontent-c0]   input[_ngcontent-c0]::-webkit-input-placeholder {
+      color: #b3b3b3; }
+    .input[_ngcontent-c0]   label[_ngcontent-c0]   img.icon[_ngcontent-c0] {
+      display: inline-block;
+      width: 13px;
+      position: relative;
+      top: 3px;
+      margin-right: 5px; }
+    .input[_ngcontent-c0]   label[_ngcontent-c0]   .auth-code[_ngcontent-c0] {
+      width: 95px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      background: #FF7422;
+      border-radius: 100px;
+      font-size: 12px;
+      color: white;
+      float: right;
+      padding: 0 10px;
+      font-weight: bold; }
+      .input[_ngcontent-c0]   label[_ngcontent-c0]   .auth-code.number[_ngcontent-c0] {
+        color: #666666;
+        font-size: 12px;
+        background: #fff;
+        letter-spacing: 0;
+        border: 1px solid #FF7422; }
+  .input[_ngcontent-c0]   .phoneNumber[_ngcontent-c0] {
+    padding-top: 20px; }
+
+.tips[_ngcontent-c0] {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #666666;
+  margin-top: 15px; }
+  .tips[_ngcontent-c0]   em[_ngcontent-c0] {
+    color: #6C9DD9; }
+
+.submit[_ngcontent-c0] {
+  background: #FF7422;
+  margin-top: 40px;
+  color: white;
+  height: 49px;
+  width: 63%;
+  border-radius: 100px;
+  margin: 10px 0 0 18.5%;
+  font-size: 18px; }
+  .submit.disabled[_ngcontent-c0] {
+    background: #FFC7A7; }
+
+i.shadow[_ngcontent-c0] {
+  position: relative;
+  display: inline-block;
+  width: 53%;
+  height: 0px;
+  background-color: rgba(255, 115, 35, 0.5);
+  bottom: 15px;
+  left: -26%;
+  margin-left: 50%;
+  box-shadow: 0 0 25px 4px #f75a01;
+  opacity: 0; }
+
+i.show[_ngcontent-c0] {
+  opacity: 1; }
+
+.record[_ngcontent-c0] {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  font-size: 12px;
+  color: #666666;
+  text-align: center;
+  float: left;
+  line-height: 18px; }
+  .record[_ngcontent-c0]   span[_ngcontent-c0] {
+    display: block; }
+
+.label[_ngcontent-c0] {
+  display: block;
+  font-size: 17px;
+  padding: 18px 5px;
+  position: relative;
+  
+  
+  
+  font-size: 15px;
+  border-bottom: 1px solid #e1e2e6; }
+  .label[_ngcontent-c0]   img[_ngcontent-c0] {
+    display: inline-block;
+    width: 13px;
+    top: 3px !important;
+    margin-right: 5px; }
+  .label[_ngcontent-c0]   .icon[_ngcontent-c0] {
+    position: relative !important; }
+  .label[_ngcontent-c0]   input[_ngcontent-c0] {
+    border: none;
+    width: 50%;
+    outline: medium;
+    padding: 0; }
+  .label[_ngcontent-c0]   input[_ngcontent-c0]::-webkit-input-placeholder {
+    color: #afb0b3; }
+  .label[_ngcontent-c0]   input[_ngcontent-c0]:-moz-placeholder {
+    color: #afb0b3; }
+  .label[_ngcontent-c0]   input[_ngcontent-c0]::-moz-placeholder {
+    color: #afb0b3; }
+  .label[_ngcontent-c0]   input[_ngcontent-c0]:-ms-input-placeholder {
+    color: #afb0b3; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .label[_ngcontent-c0] {
+      font-size: 15px;
+      border-bottom: 0;
+      background-repeat: repeat-x;
+      background-size: 100% 1px;
+      background-position: left bottom;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e1e2e6)); } }
+  .label[_ngcontent-c0]   span[_ngcontent-c0] {
+    color: #afb0b3;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -17px;
+    line-height: 34px; }
+  .label[_ngcontent-c0]   .active[_ngcontent-c0] {
+    color: #3f69f2; }
+  .label[_ngcontent-c0]   img[_ngcontent-c0] {
+    position: absolute;
+    right: 0px;
+    top: 50%; }
+  .label[_ngcontent-c0]   .tel-delete-icon[_ngcontent-c0] {
+    width: 15px;
+    margin-top: -8px; }
+  .label[_ngcontent-c0]   .code-icon[_ngcontent-c0] {
+    width: 18px;
+    margin-top: -10px;
+    right: 128px; }
+  .label[_ngcontent-c0]   .code-img[_ngcontent-c0] {
+    width: 118px;
+    height: 40px;
+    margin-top: 4px; }
+
+.platform-android[_nghost-c0]   .record[_ngcontent-c0], .platform-android   [_nghost-c0]   .record[_ngcontent-c0] {
+  position: relative;
+  margin-top: 43%; }
+
+.bg-pic[_ngcontent-c0] {
+  position: relative;
+  width: 100%;
+  height: 105%;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0; }
+  .bg-pic.bOne[_ngcontent-c0] {
+    background-image: url("./assets/images/firstPic.png"); }
+  .bg-pic.bTwo[_ngcontent-c0] {
+    background-image: url("./assets/images/bTwo.png"); }
+  .bg-pic.dOne[_ngcontent-c0] {
+    background-image: url("./assets/images/dOne.png"); }
+  .bg-pic.dTwo[_ngcontent-c0] {
+    background-image: url("./assets/images/dTwo.png"); }
+
+@media screen and (max-width: 362px) and (max-height: 485px) {
+  .bg-pic[_ngcontent-c0] {
+    height: 110%; } }
+
+.disabledC[_ngcontent-c0]:disabled {
+  opacity: 1; }</style><style>.bg[_ngcontent-c1] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #E61209;
+  z-index: 8; }
+
+.page-wrap[_ngcontent-c1] {
+  background-color: #E61209;
+  padding: 31% 0 15px;
+  position: relative;
+  z-index: 9;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+  .page-wrap.bOneLast[_ngcontent-c1] {
+    background-image: url(./assets/images/bOneLast.png); }
+  .page-wrap.bTwoLast[_ngcontent-c1] {
+    background-image: url(./assets/images/bTwoLast.png); }
+  .page-wrap.dOneLast[_ngcontent-c1] {
+    background-image: url(./assets/images/dOneLast.png); }
+  .page-wrap.dTwoLast[_ngcontent-c1] {
+    background-image: url(./assets/images/dTwoLast.png); }
+  .page-wrap[_ngcontent-c1]   .sp[_ngcontent-c1] {
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 1.4;
+    padding-top: 15px;
+    opacity: 0; }
+  .page-wrap[_ngcontent-c1]   .spopacity[_ngcontent-c1] {
+    opacity: 1; }
+  .page-wrap[_ngcontent-c1]   .logo[_ngcontent-c1] {
+    width: 64px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0; }
+  .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1] {
+    background-color: #FFF;
+    border-radius: 8px;
+    margin: 0 20px;
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-top: 10px; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1] {
+      color: #243044; }
+      .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1] {
+        padding-right: 20px;
+        overflow: hidden;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        @media screen and (-webkit-min-device-pixel-ratio: 2) {
+          .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1] {
+            font-size: 15px;
+            border-bottom: 0;
+            background-repeat: repeat-x;
+            background-size: 100% 1px;
+            background-position: left bottom;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.1))); } }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i[_ngcontent-c1] {
+          width: 18px;
+          height: 16px;
+          float: left;
+          margin-top: 19.5px;
+          margin-right: 15px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.name[_ngcontent-c1] {
+          background-image: url(./assets/images/name.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.ident-card[_ngcontent-c1] {
+          background-image: url(./assets/images/ident-card.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.tel[_ngcontent-c1] {
+          background-image: url(./assets/images/tel.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.weixin[_ngcontent-c1] {
+          background-image: url(./assets/images/weixin.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.qq[_ngcontent-c1] {
+          background-image: url(./assets/images/qq.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.money[_ngcontent-c1] {
+          background-image: url(./assets/images/money.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   i.zhima[_ngcontent-c1] {
+          background-image: url(./assets/images/zhima.png); }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1] {
+          float: left;
+          height: 55px;
+          background: none;
+          outline: none;
+          border: 0px;
+          font-size: 15px; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1]::-webkit-input-placeholder, .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1]::-webkit-input-placeholder {
+          color: #b3b3b3; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1]::placeholder, .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1]::-webkit-input-placeholder {
+          color: #b3b3b3; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[disabled][_ngcontent-c1], .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   input[_ngcontent-c1]:disabled {
+          color: #243044;
+          opacity: 1;
+          -webkit-text-fill-color: #243044; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   span.yuan[_ngcontent-c1] {
+          display: inline-block;
+          float: right;
+          margin-top: 20px; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   span.zhima-score[_ngcontent-c1] {
+          color: #7ED321; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   .label[_ngcontent-c1] {
+          display: block;
+          padding: 19px 15px 19px 0; }
+          .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   .label[_ngcontent-c1]   .right[_ngcontent-c1] {
+            color: #afb0b3; }
+        .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .list-wrap[_ngcontent-c1]   li[_ngcontent-c1]   .icon-start[_ngcontent-c1] {
+          height: 53px;
+          line-height: 53px;
+          float: left;
+          color: red; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .checkbox[_ngcontent-c1] {
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+      line-height: 1.4; }
+      .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .checkbox[_ngcontent-c1]   span[_ngcontent-c1] {
+        color: #6C9DD9; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .borrow-money-btn[_ngcontent-c1] {
+      width: 234px;
+      height: 49px;
+      border-radius: 25px;
+      color: #FFF;
+      font-size: 16px;
+      background-color: #FFC7A7;
+      font-weight: bold;
+      margin: 30px 0 22px;
+      position: relative;
+      left: 50%;
+      margin-left: -125px; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   .active[_ngcontent-c1] {
+      background-color: #FF7323; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   i.shadow[_ngcontent-c1] {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      height: 0px;
+      background-color: rgba(255, 115, 35, 0.5);
+      bottom: 35px;
+      left: -105px;
+      margin-left: 50%;
+      box-shadow: 0 0 25px 4px #f75a01;
+      opacity: 0; }
+    .page-wrap[_ngcontent-c1]   .wrap[_ngcontent-c1]   i.show[_ngcontent-c1] {
+      opacity: 1; }</style></head>
+<body>
+  <div id="hc-ng2-container">
+    <ion-app class="app-root app-root-ios ios platform-core enable-hover" ng-version="4.1.2"><div app-viewport=""></div><app-root class="app-root">
+    <ion-nav><div nav-viewport=""></div><div class="nav-decor"></div></ion-nav>
+    <router-outlet></router-outlet><first-apply _nghost-c1="" class="main-absolute-page" style="z-index: 2; transform: translateX(0px); opacity: 1;">
+        <div _ngcontent-c1="" class="jon-base-page main-absolute-page main-enter-page">
+    <ion-content _ngcontent-c1="" class="content content-ios"><div class="fixed-content"></div><div class="scroll-content">
+  <div _ngcontent-c1="" class="bg"></div>
+  <div _ngcontent-c1="" class="page-wrap bOneLast">
+    
+    <div _ngcontent-c1="" class="wrap">
+      <ul _ngcontent-c1="" class="list-wrap">
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+          <i _ngcontent-c1="" class="name"></i>
+          <input _ngcontent-c1="" maxlength="10" placeholder="请输入姓名" type="text" class="ng-untouched ng-pristine ng-valid">
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+          <i _ngcontent-c1="" class="ident-card"></i>
+          <input _ngcontent-c1="" maxlength="18" placeholder="请输入身份证号" type="text" class="ng-untouched ng-pristine ng-valid">
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+          <i _ngcontent-c1="" class="tel"></i>
+          <input _ngcontent-c1="" maxlength="11" placeholder="请输入手机号" type="tel" class="ng-untouched ng-pristine" disabled="">
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start" style="color: red;">＊</span></section>            
+            <i _ngcontent-c1="" class="zhima"></i>
+          
+            
+            <label _ngcontent-c1="" class="label">
+                <!----><span _ngcontent-c1="" class="right family-right">
+                    请如实填写芝麻分
+                </span>
+                <!---->
+            </label>
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+          <i _ngcontent-c1="" class="weixin"></i>
+          <input _ngcontent-c1="" maxlength="20" placeholder="请输入微信号" type="text" class="ng-untouched ng-pristine ng-valid">
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+          <i _ngcontent-c1="" class="qq"></i>
+          <input _ngcontent-c1="" maxlength="15" minlength="5" placeholder="请输入QQ号" type="tel" class="ng-untouched ng-pristine ng-valid">
+        </li>
+        <li _ngcontent-c1="">
+            <section _ngcontent-c1="" class="start"><!----><span _ngcontent-c1="" class="icon-start">＊</span></section>                        
+            <i _ngcontent-c1="" class="money"></i>
+            <input _ngcontent-c1="" maxlength="5" placeholder="请输入借款金额" style="width: 130px;" type="tel" class="ng-untouched ng-pristine ng-valid">
+            <span _ngcontent-c1="" class="yuan">元</span>                
+        </li>
+      </ul>
+      
+      <button _ngcontent-c1="" class="borrow-money-btn">马上领钱</button>
+      <i _ngcontent-c1="" class="shadow"></i>
+
+    </div>
+    <div _ngcontent-c1="" class="sp">厦门九钛网络科技有限公司<br _ngcontent-c1="">闽ICP备17020853号</div>
+  </div>
+</div></ion-content><jdb-overlay _ngcontent-c1="">
+    <div data-tap-disabled="true" jdb-overlay-portal=""></div>
+    <div data-tap-disabled="true" jdb-overlay-portal=""></div>
+    <div class="other-overlay" data-tap-disabled="true" jdb-overlay-portal="">
+    </div>
+  </jdb-overlay>
+  </div>    </first-apply>
+    <jdb-overlay>
+    <div data-tap-disabled="true" jdb-overlay-portal=""></div>
+    <div data-tap-disabled="true" jdb-overlay-portal=""></div>
+    <div class="other-overlay" data-tap-disabled="true" jdb-overlay-portal="">
+    </div>
+  </jdb-overlay>
+  </app-root><div overlay-portal=""></div><div overlay-portal=""></div><div class="loading-portal" overlay-portal=""></div><div class="toast-portal"></div><div class="click-block click-block-enabled"></div></ion-app>
+  </div>
+  <ion-nav-view id="hc-ng1-container"></ion-nav-view>
+  <!-- 容错元素 -->
+  <div id="jdb-global-hide"></div>
+   
+    <script type="text/javascript">
+   
+    </script>
+    <script type="text/javascript" src="../js/polyfills.js"></script></script><div id="HYXC-wrap" class="disabled">
+<div id="jdb-global-mask"></div><script type="text/javascript" src="../js/sensorsdata.min.js"></script>
+
+
+</body></html>
