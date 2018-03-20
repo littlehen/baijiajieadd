@@ -10,7 +10,7 @@ import com.example.demo.service.UserOneService;
 
 
 @RestController
-public class UserOneController {
+public class  UserOneController {
 
 	@Autowired
 	UserOneService useroneService;
