@@ -1,101 +1,69 @@
 package com.example.demo.other;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
-import com.sun.jersey.core.util.MultivaluedMapImpl;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.ws.rs.core.MediaType;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-/**
- *
- * @author Administrator
- */
 public class Api {
-    public static void main(String[] args) {
-        Api api = new Api();
-        String httpResponse =  api.testSend();
-         try {
-            JSONObject jsonObj = new JSONObject( httpResponse );
-            int error_code = jsonObj.getInt("error");
-            String error_msg = jsonObj.getString("msg");
-            if(error_code==0){
-                System.out.println("Send message success.");
-            }else{
-                System.out.println("Send message failed,code is "+error_code+",msg is "+error_msg);
-            }
-        } catch (JSONException ex) {
-            Logger.getLogger(Api.class.getName()).log(Level.SEVERE, null, ex);
-        }
+	
+	private static String send_url = "https://sms.yunpian.com/v2/sms/single_send.json";
+	
+	private  static String apikey = "f6b2714d216c2113b9f23a9deae4ab14"; 
+	
+	private static String ENCODING = "UTF-8";
 
-        httpResponse =  api.testStatus();
+	
+	public static String Sendinfo(String mobile,int number) {
+		Map<String,String> map = new HashMap<>();
+		String text = "【云片网】您的验证码是"+ number;
+		map.put("apikey", apikey);
+		map.put("text", text);
+		map.put("mobile", mobile);
+		return post(send_url, map);
+	}
+	
+    public static String post(String url, Map < String, String > paramsMap) {
+        CloseableHttpClient client = HttpClients.createDefault();
+        String responseText = "";
+        CloseableHttpResponse response = null;
         try {
-            JSONObject jsonObj = new JSONObject( httpResponse );
-            int error_code = jsonObj.getInt("error");
-            if( error_code == 0 ){
-                int deposit = jsonObj.getInt("deposit");
-                System.out.println("Fetch deposit success :"+deposit);
-            }else{
-                String error_msg = jsonObj.getString("msg");
-                System.out.println("Fetch deposit failed,code is "+error_code+",msg is "+error_msg);
+            HttpPost method = new HttpPost(url);
+            if (paramsMap != null) {
+                List < NameValuePair > paramList = new ArrayList <
+                    NameValuePair > ();
+                for (Map.Entry < String, String > param: paramsMap.entrySet()) {
+                    NameValuePair pair = new BasicNameValuePair(param.getKey(),
+                        param.getValue());
+                    paramList.add(pair);
+                }
+                method.setEntity(new UrlEncodedFormEntity(paramList,
+                    ENCODING));
             }
-        } catch (JSONException ex) {
-            Logger.getLogger(Api.class.getName()).log(Level.SEVERE, null, ex);
+            response = client.execute(method);
+            HttpEntity entity = response.getEntity();
+            if (entity != null) {
+                responseText = EntityUtils.toString(entity, ENCODING);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                response.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
-
-    }
-
-    private String testSend(){
-        // just replace key here
-        Client client = Client.create();
-        client.addFilter(new HTTPBasicAuthFilter(
-            "api","key-5d042a7dc355a42cf662ccb4f38f3ecc"));
-        WebResource webResource = client.resource(
-            "http://sms-api.luosimao.com/v1/send.json");
-        MultivaluedMapImpl formData = new MultivaluedMapImpl();
-        formData.add("mobile", "13761428267");
-        String str = random();
-        formData.add("message", "验证码："+str+"【佶津测试】");
-        ClientResponse response =  webResource.type( MediaType.APPLICATION_FORM_URLENCODED ).
-        post(ClientResponse.class, formData);
-        String textEntity = response.getEntity(String.class);
-        int status = response.getStatus();
-        System.out.print(textEntity);
-        System.out.print(status);
-        return textEntity;
-    }
-
-    private String testStatus(){
-        Client client = Client.create();
-        client.addFilter(new HTTPBasicAuthFilter(
-            "api","key-5d042a7dc355a42cf662ccb4f38f3ecc"));
-        WebResource webResource = client.resource( "http://sms-api.luosimao.com/v1/status.json" );
-        MultivaluedMapImpl formData = new MultivaluedMapImpl();
-        ClientResponse response =  webResource.get( ClientResponse.class );
-        String textEntity = response.getEntity(String.class);
-        int status = response.getStatus();
-        System.out.print(status);
-        System.out.print(textEntity);
-        return textEntity;
-    }
-    
-    private String random() {
-    	String str="0123456789";
-    	StringBuilder sb=new StringBuilder(6);
-    	String str1 = null;
-    	for(int i=0;i<6;i++)
-    	{
-    	char ch=str.charAt(new Random().nextInt(str.length()));
-    	sb.append(ch);
-    	}
-    	str1 = sb.toString();
-    	return str1;
+        return responseText;
     }
 }

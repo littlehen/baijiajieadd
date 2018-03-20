@@ -2,10 +2,17 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class BaijiajieaddApplication {
-
+public class BaijiajieaddApplication //extends SpringBootServletInitializer 
+{
+	
+//	@Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(BaijiajieaddApplication.class);
+//    }
 	public static void main(String[] args) {
 		SpringApplication.run(BaijiajieaddApplication.class, args);
 	}
